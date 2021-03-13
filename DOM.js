@@ -44,3 +44,7 @@ for(var i=0; i<items.length; i++) {
     items[i].style ="border: 1px solid blue; font-Weight: Bold;"
 }
 items[2].style.backgroundColor = 'green';
+
+// get element by tag Name
+var byTag = document.getElementsByTagName('li');
+byTag[3].style.backgroundColor = 'pink';
