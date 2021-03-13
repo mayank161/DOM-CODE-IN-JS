@@ -32,5 +32,15 @@ document.getElementById('header').style.borderBottom = 'solid 3px #000';
 
 // innerHtml do not overRide the thing in (id) 
 // instead it will create the html inside the id.
-fHead.innerHTML = '<h1 id="ms" style="color: green;"> created by innerHtml </h1>';
-fHead.style.fontWeight = 'bold';
+var firstDiv = document.getElementById('good');
+firstDiv.innerHTML = '<B style = "color: green">created by innerHtml</B>';
+
+// get Element by class name
+
+var items = document.getElementsByClassName('getClassItems');
+console.log('number of item present in this class is',items);
+
+for(var i=0; i<items.length; i++) {
+    items[i].style ="border: 1px solid blue; font-Weight: Bold;"
+}
+items[2].style.backgroundColor = 'green';
