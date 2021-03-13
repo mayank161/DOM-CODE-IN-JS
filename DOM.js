@@ -1,4 +1,5 @@
 // Examine the document objects
+// Note Some cases are not same as YAV assignment due to coalition
 
 //console.dir(document); // it display all the objects oj document
 console.log(document.domain); // show domain
@@ -48,3 +49,27 @@ items[2].style.backgroundColor = 'green';
 // get element by tag Name
 var byTag = document.getElementsByTagName('li');
 byTag[3].style.backgroundColor = 'pink';
+
+// select by querySelector
+// we can take any value inside querySelector
+
+document.querySelector('h2').style.backgroundColor = 'black'; // here we get the first h2 tag
+
+// to select particular item from the common multiple tags, classNames , id etc we have to use child command
+
+document.querySelector('.getClassItems:nth-child(3)').style.visibility = 'hidden'; // nth-child will get particular index
+
+document.querySelector('.getClassItems:nth-child(5)').style.backgroundColor = 'green';
+
+
+// get element by querySelectorAll
+
+var head = document.querySelectorAll('#vs');
+console.log(head);
+head[0].style.color = 'blue'; 
+
+var odd = document.querySelectorAll('li:nth-child(odd)'); // it will chose the all odd li items so we can iterate them
+
+for(var i=0; i< odd.length; i++) {
+    odd[i].style.color = 'green';
+}
